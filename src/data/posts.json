@@ -1,0 +1,16 @@
+{
+    "posts": [
+        {
+            "id": "next.js13-udemy",
+            "title": "Next.js13をUdemyで学ぶ",
+            "content": "shincodeさんの教材でNext.js13を学んでいます。",
+            "createdAt": "2024/2/01"
+        },
+        {
+            "id": "",
+            "title": "TypeScript & Next.js を使ってブログを作る。",
+            "content": "TypeScript & Next.js を使ってブログを作っています。この演習を通して、TypeScriptとNext.jsでの開発の進め方が定着するといいなと思う。",
+            "createdAt": "2024/02/02"
+        }
+    ]
+}
