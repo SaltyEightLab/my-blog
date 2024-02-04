@@ -31,7 +31,7 @@ export const getDetailArticle = async (id: string): Promise<Article> => {
   return article;
 };
 
-export const createArtigle = async (
+export const createArticle = async (
   id: string,
   title: string,
   content: string
