@@ -15,7 +15,8 @@ const ArticleCard = ({article}: ArticleCardProps) => {
               src={`http://source.unsplash.com/collection/1346951/1000x500?sig-${article.id}`}
               alt=""
               width={1280}
-              height={300} />
+              height={300}
+              priority />
       </Link>
       <div className='bg-white flex flex-col justify-start p-6'>
           <Link href='#' className='text-blue-700 pb-4 font-bold'>
