@@ -1,10 +1,20 @@
 import Image from "next/image";
 import ArticleList from "./components/ArticleList";
 import { getAllArticles } from "@/blogAPI";
+import { supabase } from "@/utils/supabaseClient";
 
 export default async function Home() {
-  const articles = await getAllArticles();
+  // const articles = await getAllArticles();
+  // console.log(supabase);
+
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
+  const res = await fetch(`${API_URL}/api`, { cache: "no-store" });//SSRで全記事取得
+  const articles = await res.json();
+
+  console.log("おはよう");
   console.log(articles);
+  console.log("さようなら");
 
   return (
     <div className="md:flex">
