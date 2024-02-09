@@ -33,6 +33,8 @@ const CreatBlogPage = () => {
     setLoading(false);
     router.push("/");
     router.refresh();
+
+    console.log("handleSubmitを実行しています。");
   };
 
   return (
