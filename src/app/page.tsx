@@ -12,10 +12,6 @@ export default async function Home() {
   const res = await fetch(`${API_URL}/api`, { cache: "no-store" });//SSRで全記事取得
   const articles = await res.json();
 
-  console.log("おはよう");
-  console.log(articles);
-  console.log("さようなら");
-
   return (
     <div className="md:flex">
       <section className="w-full md:w-2/3 flex-col ltems-center px-3">

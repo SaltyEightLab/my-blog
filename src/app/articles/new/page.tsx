@@ -16,10 +16,19 @@ const CreatBlogPage = () => {
 
     setLoading(true);
 
-    // APIを呼び出す前に3秒待機する
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    // // APIを呼び出す前に3秒待機する
+    // await new Promise((resolve) => setTimeout(resolve, 3000));
 
-    await createArticle(id, title, content);
+    // await createArticle(id, title, content);
+    const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
+    await fetch(`${API_URL}/api/create`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({id, title, content}),
+    }); 
 
     setLoading(false);
     router.push("/");
