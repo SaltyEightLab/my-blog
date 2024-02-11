@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 
 const Article = async ({ params }: { params: { id: string } }) => {
+  // const detailArticle = await getDetailArticle(params.id);
 
     // const detailArticle = await getDetailArticle(params.id);
 
@@ -29,7 +30,7 @@ const Article = async ({ params }: { params: { id: string } }) => {
         <p>{detailArticle.content}</p>
       </div>
       <div className="text-right">
-        <DeleteButton id={detailArticle.id}/>
+        <DeleteButton id={detailArticle.id} />
       </div>
     </div>
   );
